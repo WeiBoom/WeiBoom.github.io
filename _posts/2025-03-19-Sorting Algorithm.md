@@ -8,6 +8,7 @@ tags: Algorithm
 
 列举了常见的排序算法，包括冒泡排序、选择排序、插入排序、希尔排序、归并排序、快速排序、堆排序和计数排序，学习不同排序策略（如分治法、贪心算法等）
 
+## 排序可视化网站
 可以通过[可视化排序算法](https://markdown.com.cn)的网站来查看各个排序算法的效果
 
 ## 算法复杂度 {#算法复杂度}
@@ -28,8 +29,8 @@ tags: Algorithm
 
 ## 八大排序算法 {#八大排序算法}
 
-<details>
-<summary id="1-冒泡排序" style="font-size:16px;font-weight:bold"> 1. 冒泡排序  <p style="font-size:14px">时间复杂度：O(n²) 最好O(n) 空间复杂度：O(1)</p></summary>
+### 1-冒泡排序
+***时间复杂度：O(n²) 最好O(n) 空间复杂度：O(1)***
 
 冒泡排序（Bubble Sort）是一种简单的排序算法，它重复地走访要排序的数列，一次比较两个元素，如果它们的顺序错误就把它们交换过来
   
@@ -91,16 +92,13 @@ tags: Algorithm
           if not swapped:
               break
   ```
-  </details>
-  
-  <details>
-  <summary id="2-选择排序" style="font-size:16px;font-weight:bold"> 2. 选择排序  <p style="font-size:14px">时间复杂度：O(n^2) 空间复杂度：O(1)</p></summary>
-  
-  <br>
+
+  ### 2-选择排序
+  ***时间复杂度：O(n²) 最好O(n) 空间复杂度：O(1)***
+
   选择排序（Selection Sort）是一种简单直观的排序算法，它的基本思想是：每次从未排序的元素中选择最小的一个元素，放到已排序序列的末尾。
-  <br><br>
+
   选择排序的主要优点在于它实现简单，并且对于小规模数据的排序效果较好。但是，由于其时间复杂度为O(n^2)，因此不适用于大规模数据的排序。
-  <br><br>
   
   选择排序的步骤如下：
   1. 首先在未排序序列中找到最小（大）元素，存放到排序序列的起始位置。
@@ -157,13 +155,11 @@ tags: Algorithm
           arr[i], arr[min_idx] = arr[min_idx], arr[i]
   ```
   
-  </details>
-  
-  <details>
-  <summary id="3-插入排序" style="font-size:16px;font-weight:bold">  3. 插入排序 (Insertion Sort)  <p style="font-size:14px">时间复杂度：O(n^2) 最好O(n) 空间复杂度：O(1)</p></summary>
+  ### 3-插入排序
+  ***时间复杂度：O(n²) 最好O(n) 空间复杂度：O(1)***
   
   插入排序（Insertion Sort）是一种简单直观的排序算法，它的基本思想是：将待排序的元素逐个插入到已排序的序列中，从而得到一个有序的序列。
-  <br><br>
+
   插入排序的主要优点在于它实现简单，并且对于小规模数据的排序效果较好。但是，由于其时间复杂度为O(n^2)，因此不适用于大规模数据的排序。
   
   插入排序的步骤如下：
@@ -217,14 +213,12 @@ tags: Algorithm
               j -= 1
           arr[j + 1] = key
   ```
-  
-  </details>
-  
-  <details>
-  <summary id="4-希尔排序" style="font-size:16px;font-weight:bold">4. 希尔排序 (Shell Sort)  <p style="font-size:14px">时间复杂度：O(n^2) 最好O(n) 空间复杂度：O(1)</p></summary>
+
+  ### 4-希尔排序
+  ***时间复杂度：O(n²) 最好O(n) 空间复杂度：O(1)***
   
   希尔排序（Shell Sort）是一种改进的插入排序算法，它的基本思想是：将待排序的序列分成若干个子序列，对每个子序列进行插入排序，然后逐步缩小子序列的长度，最终得到一个有序的序列。
-  <br><br>
+
   希尔排序的主要优点在于它可以减少插入排序的比较次数和移动次数，从而提高排序的效率。但是，由于其时间复杂度为O(n^2)，因此不适用于大规模数据的排序。
   
   - 希尔排序的步骤如下：
@@ -287,13 +281,11 @@ tags: Algorithm
           gap //= 2
   ```
   
-  </details>
-  
-  <details>
-  <summary id="5-归并排序" style="font-size:16px;font-weight:bold">5. 归并排序 (Merge Sort)  <p style="font-size:14px">时间复杂度：O(n log n) 空间复杂度：O(n)</p></summary>
+  ### 5-归并排序
+  ***时间复杂度：O(n log n) 空间复杂度：O(n)***
   
   归并排序（Merge Sort）是一种基于分治思想的排序算法，它的基本思想是：将待排序的序列分成若干个子序列，对每个子序列进行排序，然后将排序好的子序列合并成一个有序的序列。
-  <br><br>
+
   归并排序的主要优点在于它可以将两个有序的子序列合并成一个有序的序列，从而提高排序的效率。但是，由于其时间复杂度为O(n log n)，因此不适用于大规模数据的排序。
   
   - 归并排序的步骤如下：
@@ -302,7 +294,6 @@ tags: Algorithm
   3. 将两个有序的子序列合并成一个有序的序列。
   
   代码实现
-
 
   - C++
   ```cpp
@@ -388,13 +379,12 @@ tags: Algorithm
       result.extend(right[j:])
       return result
   ```
-  
-  </details>
-  
-  <details>
-  <summary id="6-快速排序" style="font-size:16px;font-weight:bold"> 6. 快速排序 (Quick Sort)  <p style="font-size:14px">时间复杂度：O(n log n) 最坏O(n^2) 空间复杂度：O(log n)</p></summary>
+
+  ### 6-快速排序
+  ***时间复杂度：O(n log n) 最坏O(n^2) 空间复杂度：O(log n)***
+
   快速排序（Quick Sort）是一种基于分治思想的排序算法，它的基本思想是：通过一趟排序将待排序序列分成两个子序列，其中一个子序列的所有元素都比另一个子序列的所有元素小，然后对这两个子序列分别进行快速排序，最终将整个序列排序。
-  <br><br>
+
   快速排序的主要优点在于它可以将序列分成两个子序列，从而减少排序的比较次数，从而提高排序的效率。但是，由于其时间复杂度为O(n log n)，因此不适用于大规模数据的排序。
   
   - 快速排序的步骤如下：
@@ -468,13 +458,12 @@ tags: Algorithm
       right = [x for x in arr if x > pivot]
       return quick_sort(left) + middle + quick_sort(right)
   ```
-  </div.>
-  </details>
-  
-  <details>
-  <summary id="7-堆排序" style="font-size:16px;font-weight:bold"> 7. 堆排序 (Heap Sort) <p style="font-size:14px">时间复杂度：O(n log n) 空间复杂度：O(1)</p></summary>
+
+### 7-堆排序
+***时间复杂度：O(n log n) 空间复杂度：O(1)***
+
   堆排序（Heap Sort）是一种基于堆数据结构的排序算法，它的基本思想是：将待排序序列构造成一个大顶堆或小顶堆，然后将堆顶元素与堆底元素交换，然后将剩余的元素重新构造成一个堆，重复上述步骤，最终得到一个有序的序列。
-  <br><br>
+
   堆排序的主要优点在于它可以将序列分成两个子序列，从而减少排序的比较次数，从而提高排序的效率。但是，由于其时间复杂度为O(n log n)，因此不适用于大规模数据的排序。
   
   - 堆排序的步骤如下：
@@ -576,13 +565,12 @@ tags: Algorithm
           arr[0], arr[i] = arr[i], arr[0]
           heapify(arr, i, 0)
   ```
-  
-  </details>
-  
-  <details>
-  <summary id="8-计数排序" style="font-size:16px;font-weight:bold"> 8. 计数排序 (Counting Sort) <p style="font-size:14px">时间复杂度：O(n + k) 空间复杂度：O(k)</p></summary>
+
+### 8-计数排序
+***时间复杂度：O(n + k) 空间复杂度：O(k)***
+
   计数排序（Counting Sort）是一种非比较排序算法，它的基本思想是：统计待排序序列中每个元素出现的次数，然后根据元素出现的次数将元素排序。
-  <br><br>
+
   计数排序的主要优点在于它可以将序列分成两个子序列，从而减少排序的比较次数，从而提高排序的效率。但是，由于其时间复杂度为O(n + k)，因此不适用于大规模数据的排序。
   
   - 计数排序的步骤如下：
@@ -590,7 +578,6 @@ tags: Algorithm
   2. 根据元素出现的次数将元素排序。
   
   代码实现
-
 
   - C++
   ```cpp
@@ -666,5 +653,3 @@ tags: Algorithm
       for i in range(len(arr)):
           arr[i] = output[i]
   ```
-  
-  </details>
