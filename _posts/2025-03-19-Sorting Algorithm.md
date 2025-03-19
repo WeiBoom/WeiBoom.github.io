@@ -3,87 +3,14 @@ title: Sorting Algorithm
 tags: Algorithm
 ---
 
-<style>
-  .toc {
-    position: fixed;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    background:rgb(255, 255, 255);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    z-index: 1000;
-    max-height: 80vh;
-    overflow-y: auto;
-  }
-  .toc a {
-    display: block;
-    color: #333;
-    text-decoration: none;
-    margin: 8px 0;
-    padding: 4px 8px;
-    border-radius: 4px;
-    transition: all 0.2s ease;
-  }
-  .toc a:hover {
-    background:rgb(255, 255, 255);
-    color: #007bff;
-    transform: translateX(4px);
-  }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  }
-  th, td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-  }
-  th {
-    background-color:rgb(84, 141, 196);
-    font-weight: 600;
-  }
-  details {
-    margin: 20px 0;
-    padding: 16px;
-    border-radius: 8px;
-    border: 1px solidrgb(127, 167, 207);
-    background:rgba(83, 83, 83, 0.32);
-  }
-  summary {
-    cursor: pointer;
-    font-weight: 600;
-    color:rgb(255, 255, 255);
-  }
-  .code-block {
-    background:rgb(57, 63, 70);
-    padding: 16px;
-    border-radius: 6px;
-    margin: 16px 0;
-    overflow-x: auto;
-  }
-</style>
-
-<div class="toc">
-  <a href="#算法复杂度">算法复杂度</a>
-  <a href="#八大排序算法">八大排序算法</a>
-  <a href="#1-冒泡排序">1. 冒泡排序</a>
-  <a href="#2-选择排序">2. 选择排序</a>
-  <a href="#3-插入排序">3. 插入排序</a>
-  <a href="#4-希尔排序">4. 希尔排序</a>
-  <a href="#5-归并排序">5. 归并排序</a>
-  <a href="#6-快速排序">6. 快速排序</a>
-  <a href="#7-堆排序">7. 堆排序</a>
-  <a href="#8-计数排序">8. 计数排序</a>
-</div>
-
 # 排序算法
+排序算法是计算机科学中的一个基本问题，它旨在将一组元素按照一定的顺序排列。排序算法可以用于各种应用场景，例如数据存储、数据分析、搜索引擎等。
+
+列举了常见的排序算法，包括冒泡排序、选择排序、插入排序、希尔排序、归并排序、快速排序、堆排序和计数排序，学习不同排序策略（如分治法、贪心算法等）
+
+可以通过[可视化排序算法](https://markdown.com.cn)的网站来查看各个排序算法的效果
 
 ## 算法复杂度 {#算法复杂度}
-
 ---
 
 | 排序算法       | 时间复杂度       | 空间复杂度 | 最好情况       | 最坏情况       |
@@ -102,18 +29,17 @@ tags: Algorithm
 ## 八大排序算法 {#八大排序算法}
 
 <details>
-<summary id="1-冒泡排序">1. 冒泡排序 <p>时间复杂度：O(n²) 最好O(n) 空间复杂度：O(1)</p> </summary>
-  <p>冒泡排序（Bubble Sort）是一种简单的排序算法，它重复地走访要排序的数列，一次比较两个元素，如果它们的顺序错误就把它们交换过来。</p>
-  
-<h3>步骤：</h3>
+<summary id="1-冒泡排序" style="font-size:16px;font-weight:bold"> 1. 冒泡排序  <p style="font-size:14px">时间复杂度：O(n²) 最好O(n) 空间复杂度：O(1)</p></summary>
 
+冒泡排序（Bubble Sort）是一种简单的排序算法，它重复地走访要排序的数列，一次比较两个元素，如果它们的顺序错误就把它们交换过来
+  
+步骤
 1. 比较相邻的元素。如果第一个比第二个大，就交换它们两个。
 2. 对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对。
 3. 针对所有的元素重复以上的步骤，除了最后一个。
 4. 持续每次对越来越少的元素重复上面的步骤，直到没有任何一对数字需要比较。
 
-  <h3>代码实现：</h3>
-<div class="code-block">
+代码实现：
 
   - C++
   ```cpp
@@ -165,13 +91,11 @@ tags: Algorithm
           if not swapped:
               break
   ```
-  
-  </div>
   </details>
   
   <details>
   <summary id="2-选择排序" style="font-size:16px;font-weight:bold"> 2. 选择排序  <p style="font-size:14px">时间复杂度：O(n^2) 空间复杂度：O(1)</p></summary>
-  <div class="code-block">
+  
   <br>
   选择排序（Selection Sort）是一种简单直观的排序算法，它的基本思想是：每次从未排序的元素中选择最小的一个元素，放到已排序序列的末尾。
   <br><br>
@@ -186,7 +110,7 @@ tags: Algorithm
   Tip : 适用于小规模数据，内存空间有限的情况
   
   代码实现
-<div class="code-block">
+
   
   - C++
   ```cpp
@@ -232,7 +156,7 @@ tags: Algorithm
                   min_idx = j
           arr[i], arr[min_idx] = arr[min_idx], arr[i]
   ```
-  </div>
+  
   </details>
   
   <details>
@@ -248,7 +172,7 @@ tags: Algorithm
   3. 重复第二步，直到所有元素均排序完毕。
   
   代码实现
-<div class="code-block">
+
   
   - C++
   ```cpp
@@ -293,7 +217,7 @@ tags: Algorithm
               j -= 1
           arr[j + 1] = key
   ```
-  </div>
+  
   </details>
   
   <details>
@@ -307,7 +231,7 @@ tags: Algorithm
   1. 首先将待排序序列分成若干个子序列，每个子序列的长度为gap。
   2. 对每个子序列进行插入排序。
   3. 逐步缩小gap的长度，重复第二步，直到gap=1。
-<div class="code-block">
+
   
   - C++
   ```cpp
@@ -362,7 +286,7 @@ tags: Algorithm
               arr[j] = temp
           gap //= 2
   ```
-  </div>
+  
   </details>
   
   <details>
@@ -378,7 +302,7 @@ tags: Algorithm
   3. 将两个有序的子序列合并成一个有序的序列。
   
   代码实现
-<div class="code-block">
+
 
   - C++
   ```cpp
@@ -464,7 +388,7 @@ tags: Algorithm
       result.extend(right[j:])
       return result
   ```
-  </div>
+  
   </details>
   
   <details>
@@ -479,7 +403,7 @@ tags: Algorithm
   3. 将两个子序列合并成一个有序的序列。
   
   代码实现
-<div class="code-block">
+
 
   - C++
   ```cpp
@@ -560,7 +484,7 @@ tags: Algorithm
   4. 重复上述步骤，直到所有元素均排序完毕。
   
   代码实现
-<div class="code-block">
+
 
   - C++
   ```cpp
@@ -652,7 +576,7 @@ tags: Algorithm
           arr[0], arr[i] = arr[i], arr[0]
           heapify(arr, i, 0)
   ```
-  </div>
+  
   </details>
   
   <details>
@@ -666,7 +590,7 @@ tags: Algorithm
   2. 根据元素出现的次数将元素排序。
   
   代码实现
-<div class="code-block">
+
 
   - C++
   ```cpp
@@ -742,5 +666,5 @@ tags: Algorithm
       for i in range(len(arr)):
           arr[i] = output[i]
   ```
-  </div>
+  
   </details>
