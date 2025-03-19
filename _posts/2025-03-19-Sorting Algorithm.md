@@ -631,6 +631,7 @@ tags: 算法
           arr[i] = output[i];
   }
   ```
+  
   - Python
   ```python
   # 时间复杂度：O(n + k) 空间复杂度：O(k)
@@ -653,6 +654,5 @@ tags: 算法
           count[arr[i] - min_val] -= 1
   
       for i in range(len(arr)):
-
-
           arr[i] = output[i]
+  ```
