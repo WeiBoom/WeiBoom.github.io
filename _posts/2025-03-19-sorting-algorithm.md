@@ -48,42 +48,45 @@ tags:
 代码实现：
 
 - C++
+
 ```cpp
 // C++ 实现
 void bubbleSort(vector<int>& arr) {
-int n = arr.size();
-for (int i = 0; i < n-1; i++) {
-    bool swapped = false;
-    for (int j = 0; j < n-i-1; j++) {
-    if (arr[j] > arr[j+1]) {
-        swap(arr[j], arr[j+1]);
-        swapped = true;
+    int n = arr.size();
+    for (int i = 0; i < n-1; i++) {
+        bool swapped = false;
+        for (int j = 0; j < n-i-1; j++) {
+            if (arr[j] > arr[j+1]) {
+                swap(arr[j], arr[j+1]);
+                swapped = true;
+            }
+        }
+        if (!swapped) break;
     }
-    }
-    if (!swapped) break;
-}
 }
 ```
 
 - C#
+
 ``` csharp
 // 时间复杂度：O(n²) 最好O(n) 空间复杂度：O(1
 public static void BubbleSort(int[] arr) {
 int n = arr.Length;
-for (int i = 0; i < n - 1; i++) {
-    bool swapped = false;
-    for (int j = 0; j < n - i - 1; j++) {
-        if (arr[j] > arr[j + 1]) {
-            (arr[j], arr[j + 1]) = (arr[j + 1], arr[j]);
-            swapped = true;
+    for (int i = 0; i < n - 1; i++) {
+        bool swapped = false;
+        for (int j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                (arr[j], arr[j + 1]) = (arr[j + 1], arr[j]);
+                swapped = true;
+            }
         }
+        if (!swapped) break;
     }
-    if (!swapped) break;
-}
 }
 ```
 
 - Python
+
 ```python
 # 时间复杂度：O(n²) 最好O(n) 空间复杂度：O(1)
 def bubble_sort(arr):
@@ -116,6 +119,7 @@ Tip : 适用于小规模数据，内存空间有限的情况
 
 
 - C++
+
 ```cpp
 // 时间复杂度：O(n²) 空间复杂度：O(1)
 void selectionSort(vector<int>& arr) {
@@ -132,6 +136,7 @@ void selectionSort(vector<int>& arr) {
 }
 ```
 - C#
+
 ```csharp
 // 时间复杂度：O(n²) 空间复杂度：O(1)
 public static void SelectionSort(int[] arr) {
@@ -148,6 +153,7 @@ public static void SelectionSort(int[] arr) {
 }
 ```
 - Python
+
 ```python
 # 时间复杂度：O(n²) 空间复杂度：O(1)
 def selection_sort(arr):
@@ -176,6 +182,7 @@ def selection_sort(arr):
 
 
 - C++
+
 ```cpp
 void insertionSort(vector<int>& arr) {
     int n = arr.size();
@@ -191,6 +198,7 @@ void insertionSort(vector<int>& arr) {
 }
 ```
 - C#
+
 ```csharp
 // 时间复杂度：O(n²) 最好O(n) 空间复杂度：O(1)
 public static void InsertionSort(int[] arr) {
@@ -207,6 +215,7 @@ public static void InsertionSort(int[] arr) {
 }
 ```
 - Python
+
 ```python
 # 时间复杂度：O(n²) 最好O(n) 空间复杂度：O(1)
 def insertion_sort(arr):
@@ -232,6 +241,7 @@ def insertion_sort(arr):
 3. 逐步缩小gap的长度，重复第二步，直到gap=1。
 
 - C++
+
 ```cpp
 // 时间复杂度：O(n log n) 到 O(n²) 空间复杂度：O(1)
 // 适用于中等规模数据
@@ -249,8 +259,8 @@ void shellSort(vector<int>& arr) {
     }
 }
 ```
-
 - C#
+
 ```csharp
 // 时间复杂度：O(n log n) 到 O(n²) 空间复杂度：O(1)
 public static void ShellSort(int[] arr) {
@@ -267,8 +277,8 @@ public static void ShellSort(int[] arr) {
     }
 }
 ```
-
 - Python
+
 ```python
 # 时间复杂度：O(n log n) 到 O(n²) 空间复杂度：O(1)
 def shell_sort(arr):
@@ -300,6 +310,7 @@ def shell_sort(arr):
 代码实现
 
 - C++
+
 ```cpp
 // 时间复杂度：O(n log n) 空间复杂度：O(n)
 // 适用于大规模数据，需要稳定排序的场景
@@ -328,8 +339,8 @@ void mergeSort(vector<int>& arr, int left, int right) {
     merge(arr, left, mid, right);
 }
 ```
-
 - C#
+
 ```csharp
 // 时间复杂度：O(n log n) 空间复杂度：O(n)
 public static void MergeSort(int[] arr, int left, int right) {
@@ -357,8 +368,8 @@ private static void Merge(int[] arr, int left, int mid, int right) {
     }
 }
 ```
-
 - Python
+
 ```python
 # 时间复杂度：O(n log n) 空间复杂度：O(n)
 def merge_sort(arr):
@@ -397,9 +408,8 @@ def merge(left, right):
 3. 将两个子序列合并成一个有序的序列。
 
 代码实现
-
-
 - C++
+
 ```cpp
 // 时间复杂度：O(n log n) 最坏O(n²) 空间复杂度：O(log n)
 // 适用于大规模数据，对稳定性没有要求的场景
@@ -424,8 +434,8 @@ void quickSort(vector<int>& arr, int low, int high) {
     }
 }
 ```
-
 - C#
+
 ```csharp
 // 时间复杂度：O(n log n) 最坏O(n²) 空间复杂度：O(log n)
 public static void QuickSort(int[] arr, int low, int high) {
@@ -449,8 +459,8 @@ private static int Partition(int[] arr, int low, int high) {
     return i + 1;
 }
 ```
-
 - Python
+
 ```python
 # 时间复杂度：O(n log n) 最坏O(n²) 空间复杂度：O(log n)
 def quick_sort(arr):
@@ -477,9 +487,8 @@ def quick_sort(arr):
 4. 重复上述步骤，直到所有元素均排序完毕。
 
 代码实现
-
-
 - C++
+
 ```cpp
 // 时间复杂度：O(n log n) 空间复杂度：O(1)
 // 适用于大规模数据，需要原地排序的场景
@@ -512,6 +521,7 @@ void heapSort(vector<int>& arr) {
 }
 ```
 - C#
+
 ```csharp
 // 时间复杂度：O(n log n) 空间复杂度：O(1)
 public static void HeapSort(int[] arr) {
@@ -543,6 +553,7 @@ private static void Heapify(int[] arr, int n, int i) {
 }
 ```
 - Python
+
 ```python
 # 时间复杂度：O(n log n) 空间复杂度：O(1)
 def heapify(arr, n, i):
@@ -584,6 +595,7 @@ def heap_sort(arr):
 代码实现
 
 - C++
+
 ```cpp
 // 时间复杂度：O(n + k) 空间复杂度：O(k)
 // 适用于整数排序，且数据范围不大的场景
@@ -609,6 +621,7 @@ void countingSort(vector<int>& arr) {
 }
 ```
 - C#
+
 ```csharp
 // 时间复杂度：O(n + k) 空间复杂度：O(k)
 public static void CountingSort(int[] arr) {
@@ -635,6 +648,7 @@ public static void CountingSort(int[] arr) {
 ```
 
 - Python
+
 ```python
 # 时间复杂度：O(n + k) 空间复杂度：O(k)
 def counting_sort(arr):
